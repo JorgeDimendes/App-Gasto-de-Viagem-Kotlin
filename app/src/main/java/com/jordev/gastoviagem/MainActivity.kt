@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //Jorge
+        //Jorge
 
     }
     fun calculate(){
