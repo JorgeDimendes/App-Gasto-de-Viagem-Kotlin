@@ -11,7 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //Jorge
+        //projeto teste 01
+        //projeto teste 01
 
     }
     fun calculate(){
