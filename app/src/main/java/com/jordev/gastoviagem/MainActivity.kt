@@ -18,3 +18,5 @@ class MainActivity : AppCompatActivity() {
     fun calculate(){
     }
 }
+
+    // Esse é um novo comentario da git checkout comentario_Animes
