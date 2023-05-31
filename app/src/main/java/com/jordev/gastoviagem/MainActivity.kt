@@ -21,3 +21,4 @@ class MainActivity : AppCompatActivity() {
 
     // Esse é um novo comentario da git checkout comentario_Animes
     //Novo comentario para deixar atualizado 10:40
+    //Novo teste para subir 10:51
