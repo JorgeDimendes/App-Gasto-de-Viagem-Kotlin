@@ -17,25 +17,37 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.buttonCalculate.setOnClickListener(this)
 
     }
+
     override fun onClick(view: View) {
-        if (view.id == R.id.button_calculate){
+        if (view.id == R.id.button_calculate) {
             calculate()
         }
     }
 
-    private fun calculate(){
+    private fun isValid(): Boolean {
+        return (binding.editDistance.text.toString() != ""
+                && binding.editPrice.text.toString() != ""
+                && binding.editAutonomy.text.toString() != ""
+                && binding.editAutonomy.text.toString().toFloat() != 0f)
+    }
 
-        val distance = binding.editDistance.text.toString().toFloat()
-        val price = binding.editPrice.text.toString().toFloat()
-        val autonomy = binding.editAutonomy.text.toString().toFloat()
+    private fun calculate() {
 
-        val totalvalue = (distance * price) / autonomy
-        //Formatar para o numero ficar com 2 casas decimais
+        if (isValid()) {
+            val distance = binding.editDistance.text.toString().toFloat()
+            val price = binding.editPrice.text.toString().toFloat()
+            val autonomy = binding.editAutonomy.text.toString().toFloat()
 
-        binding.textTotalValue.text  = "R$ ${"%.2f".format(totalvalue) }"
+            val totalvalue = (distance * price) / autonomy
+            //Formatar para o numero ficar com 2 casas decimais
 
-        // Toast notification
-        //Toast.makeText(this, totalvalueStr, Toast.LENGTH_SHORT).show()
+            binding.textTotalValue.text = "R$ ${"%.2f".format(totalvalue)}"
+
+        } else{
+            // Toast notification
+            Toast.makeText(this, R.string.validation_fill_all_fields, Toast.LENGTH_SHORT).show()
+        }
+
     }
 
 }
