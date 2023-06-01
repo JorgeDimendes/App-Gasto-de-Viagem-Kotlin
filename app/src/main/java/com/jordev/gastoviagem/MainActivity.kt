@@ -24,8 +24,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun calculate(){
+
+        val distance = binding.editDistance.text.toString().toFloat()
+        val price = binding.editPrice.text.toString().toFloat()
+        val autonomy = binding.editAutonomy.text.toString().toFloat()
+
+        val totalvalue = (distance * price) / autonomy
+        //Formatar para o numero ficar com 2 casas decimais
+
+        binding.textTotalValue.text  = "R$ ${"%.2f".format(totalvalue) }"
+
         // Toast notification
-        Toast.makeText(this, "Fui clicado!", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, totalvalueStr, Toast.LENGTH_SHORT).show()
     }
 
 }
