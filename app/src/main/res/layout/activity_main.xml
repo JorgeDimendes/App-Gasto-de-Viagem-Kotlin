@@ -65,8 +65,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:text="@string/total_spend"
         android:textAllCaps="true"
         android:textColor="@color/light_gray"
@@ -76,25 +76,24 @@
         android:id="@+id/text_total_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_gravity="center"
-        android:textStyle="bold"
+        android:layout_marginTop="5dp"
         android:text="@string/total_value"
         android:textColor="@color/Color_Money"
-        android:textSize="38sp" />
+        android:textSize="38sp"
+        android:textStyle="bold" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:onClick="teste"
         android:id="@+id/button_calculate"
         android:layout_width="350dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/calculate"
-        android:padding="15dp"
+        android:layout_marginTop="20dp"
         android:background="@color/btn_Color"
+        android:padding="15dp"
+        android:text="@string/calculate"
         android:textAllCaps="true"
-        android:textSize="18sp"
         android:textColor="@color/white"
-        android:layout_height="wrap_content"/>
+        android:textSize="18sp" />
 
 </LinearLayout>

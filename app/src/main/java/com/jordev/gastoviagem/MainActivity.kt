@@ -3,6 +3,7 @@ package com.jordev.gastoviagem
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.jordev.gastoviagem.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -17,13 +18,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     }
     override fun onClick(view: View) {
-        TODO("Not yet implemented")
+        if (view.id == R.id.button_calculate){
+            calculate()
+        }
     }
 
-    fun calculate(){
+    private fun calculate(){
+        // Toast notification
+        Toast.makeText(this, "Fui clicado!", Toast.LENGTH_SHORT).show()
     }
-
-    fun teste(view: View) {}
 
 }
-//Jorge
